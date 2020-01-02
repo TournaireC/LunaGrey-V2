@@ -53,9 +53,18 @@
         </script>
     </head>
     <body>
-        {% extends "_header.html.twig" %}
+        {% include "_header.html.twig" %}
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% include "_footer.html.twig" %}
+        {% block javascripts %} 
+            <script src="assets/js/bootstrap.min.js"></script>    
+	        <script src="assets/js/plugins.js"></script>
+	        <script src="assets/js/imagesloaded.js"></script>
+	        <script src="assets/js/prettyPhoto.js"></script>
+            <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWDPCiH080dNCTYC-uprmLOn2mt2BMSUk&amp;sensor=true"></script>
+            <script src="assets/js/init.js"></script>
+        {% endblock %}
+
 
     </body>
 </html>
